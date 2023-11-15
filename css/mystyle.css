@@ -1,5 +1,41 @@
 <style>
 
+html, body {
+        margin: 0;
+}
+
+.full-screen-video-container {
+        position: relative;
+        height: 100vh;     /* 100% viewport height,   use: 500px to make it 500 pixel high  */
+        width: 100vw;      /* 100% viewport wide */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+}
+
+.full-screen-video-container video {
+        z-index: -1;            /* negative mean in background */
+        position: absolute;
+        width: auto;
+        heidht: auto;
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+
+.full-screen-video-content {
+        background-color: transparent;
+      /*        background-color: white;
+        color: #3333;
+        padding: 20px;
+        font-size: 70px;
+        margin-top: 100px; */
+}
+
+
 *{
     box-sizing: border-box;
 }
